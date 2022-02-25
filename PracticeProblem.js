@@ -5,7 +5,7 @@ console.log(random);
 //Using the Random function to get the Dice Number
 let dice=Math.floor(Math.random()*6)+1;
 console.log(dice);
-//Add two Random Dice Numbers
+// Add two Random Dice Numbers
 let result=0;
 for(let i=0;i<2;i++)
 {
