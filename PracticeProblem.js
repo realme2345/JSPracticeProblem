@@ -1,37 +1,43 @@
-//Sequence PracticeProblem
-//Using the Random function to get a single Digit
-let random=Math.floor(Math.random()*10);
-console.log(random);
-//Using the Random function to get the Dice Number
-let dice=Math.floor(Math.random()*6)+1;
-console.log(dice);
-// Add two Random Dice Numbers
-let result=0;
-for(let i=0;i<2;i++)
+//Sequence PracticeProble
+// reads 5 Random 3 Digit values and then outputs the minimum and the maximum value
+const arr = [];
+for(let i=0;i<=5;i++)
 {
-    dice=Math.floor(Math.random()*6)+1;
-    result+=dice;
+    let ran=Math.floor(Math.random()*900) + 100;
+    arr.push(ran);
 }
-console.log("Sum of two Dice Numbers :" + result);
-//to find the two random digit numbers and find their sum
-for(let i=0;i<5;i++)
+arr.forEach(function(ran) {
+    console.log(ran);
+  });
+ console.log("The max value :" + Math.max(...arr));
+ console.log("The max value :" + Math.min(...arr));
+ //a program that takes day and month from the command line and prints true if 
+ //day of month is between March 20 and June 20, false otherwise.
+ let date=19
+ let month=4;
+ if (( (month <= 6 && date <= 20) && ((month >= 3 && date <= 20) && (date<31)) ))
+ {
+    console.log("True");
+ }
+ else{
+     console.log("False");
+ }
+//the Year is a Leap Year or not a Leap Year. 
+let year=2000;
+if((year%4==0) &&((year%100!=0) || (year%400==0))){
+    console.log("Year is a Leap year");
+}
+else
 {
-    let Sum=Math.floor(Math.random()*100);
-    console.log(Sum);
-    result+=Sum;
+    console.log("Year is not Leap year");
 }
-console.log("Sum of Two digit Numbers :" + result);
-//Use Script & Debug – Unit Conversion
-//a. 1ft = 12 in then 42 in = ? ft
-let inch=42;
-let ft=inch/12
-console.log("Feets :" + ft);
-//b. Rectangular Plot of 60 feet x 40 feet in meters
-let f1=60,f2=40;
-let RectMeter=(f1/3.28)*(f2/3.28);
-console.log("Rectangle in Meter :" + RectMeter);
-// Calculate area of 25 such plots in acres
-let ares=25;
-let acres=ares*0.0247;
-console.log("Acres :" + acres);
-
+//flip coin
+let toss = Math.floor(Math.random()*10)%2;
+if(toss==0)
+{
+    console.log("Head");
+} 
+else
+{
+    console.log("Tail");
+}
