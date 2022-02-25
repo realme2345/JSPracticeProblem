@@ -1,43 +1,62 @@
 //Sequence PracticeProble
-// reads 5 Random 3 Digit values and then outputs the minimum and the maximum value
-const arr = [];
-for(let i=0;i<=5;i++)
-{
-    let ran=Math.floor(Math.random()*900) + 100;
-    arr.push(ran);
-}
-arr.forEach(function(ran) {
-    console.log(ran);
-  });
- console.log("The max value :" + Math.max(...arr));
- console.log("The max value :" + Math.min(...arr));
- //a program that takes day and month from the command line and prints true if 
- //day of month is between March 20 and June 20, false otherwise.
- let date=19
- let month=4;
- if (( (month <= 6 && date <= 20) && ((month >= 3 && date <= 20) && (date<31)) ))
- {
-    console.log("True");
- }
- else{
-     console.log("False");
- }
-//the Year is a Leap Year or not a Leap Year. 
-let year=2000;
-if((year%4==0) &&((year%100!=0) || (year%400==0))){
-    console.log("Year is a Leap year");
-}
+//Read a single digit number and write the number in word
+let ran=Math.floor(Math.random()*10)+1;
+if(ran==1)
+console.log("One");
+else if(ran==2)
+console.log("Two");
+else if(ran==3)
+console.log("Three");
+else if(ran==4)
+console.log("Four");
+else if(ran==5)
+console.log("Five");
+else if(ran==6)
+console.log("Six")
+else if(ran==7)
+console.log("Seven")
+else if(ran==8)
+console.log("Eight")
 else
-{
-    console.log("Year is not Leap year");
-}
-//flip coin
-let toss = Math.floor(Math.random()*10)%2;
-if(toss==0)
-{
-    console.log("Head");
-} 
+console.log("Nine");
+//Read a Number and Display the week day
+let random=Math.floor(Math.random()*10)%7;
+if(random==0)
+console.log("SunDay");
+else if(random==1)
+console.log("MonDay");
+else if(random==2)
+console.log("TueDay");
+else if(random==3)
+console.log("WedDay");
+else if(random==4)
+console.log("ThurDay");
+else if(random==5)
+console.log("FroDay");
 else
-{
-    console.log("Tail");
-}
+console.log("satDay");
+//Read a Number 1, 10, 100, 1000, etc and display unit, ten, hundred,...
+let num=9846;
+let thousand = (num /1000);
+let a=num%1000;
+console.log("Thousand : " + Math.floor(thousand));
+let hun = a / 100;
+console.log("Hundreds : " + Math.floor(hun));
+let b = num % 100;
+let ten = b/ 10 ;
+console.log("Tens : " + Math.floor(ten)) ;
+let c=num%10
+let one = c / 1
+console.log("Units : " + Math.floor(one));
+//Arthamatic operation
+let k=10;
+let l=20;
+let m=30;
+let d=k + l * m;
+let e=m + k / l;
+let f=k % l + m;
+let g=k * l + m;
+const arr=[];
+arr.push(d,e,f,g);
+console.log("Maximum num : " + Math.max(...arr));
+console.log("Maximum num : " + Math.min(...arr));
