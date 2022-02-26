@@ -51,10 +51,10 @@ function Palindrome(number)
                     break;
                 }
             }
-            // if number greater than 1 and not divisible by other numbers
-            if (i > 1 && flag == 0) 
+        // if number greater than 1 and not divisible by other numbers
+             if (i > 1 && flag == 0) 
             {
-                console.log(i);
+               console.log(i);
             }
 		    let rem, temp, final = 0;
 		    temp = i;
@@ -69,5 +69,6 @@ function Palindrome(number)
 			   console.log(final + "  The number is Palindrome");
 		    }
         }
+        
 	}
     Palindrome(100);
