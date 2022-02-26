@@ -1,96 +1,92 @@
-//Selection PracticeProble using the Switch Case
-//Read a single digit number and write the number in word
-let ran=Math.floor(Math.random()*10)+1;
-switch(ran)
+//Repetition Practice Problems with for loop
+//a program that takes a command-line argument n and prints a table of the
+//powers of 2 that are less than or equal to 2^n.
+let num=10
+for(let i=0;i<=num;i++)
 {
-    case 1:
-      console.log("One");
-      break;
-    case 2:
-      console.log("Two");
-      break;
-    case 3:
-      console.log("Three");
-      break;
-    case 4:
-        console.log("Four");
-        break;
-    case 5:
-        console.log("Five");
-        break;
-    case 6:
-      console.log("Six");
-      break;
-    case 7:
-        console.log("Seven");
-        break;
-    case 8:
-        console.log("Eight");
-        break;
-    default:
-        console.log("Nine");
-        break;
+    let power=2**i
+    if(power<=2**num)
+    {
+        console.log(power);
+    }
 }
-//Read a Number and Display the week day
-let random=Math.floor(Math.random()*10)%7;
-switch(random)
+
+//a program that takes a command-line argument n and prints the nth harmonic number
+let j, n=5
+let sum=0;
+for(j=1;j<=n;j++)
 {
-    case 0:
-        console.log("SunDay");
-        break;
-    case 1:
-        console.log("MonDay");
-        break;
-    case 2:
-        console.log("TueDay");
-        break;
-    case 3:
-        console.log("WedDay");
-        break;
-    case 4:
-        console.log("ThurDay");
-        break;
-    case 5:
-        console.log("Firday");
-        break;
-    default:
-        console.log("SatDay");
-        break;
+    let harmonic=(1/j);
+    console.log(harmonic);
+    sum=sum+harmonic;
 }
-//Read a Number 1, 10, 100, 1000, etc and display unit, ten, hundred,...
-let num=9846;
-let rand=Math.floor(Math.random()*4)+1;
-switch(rand)
+console.log("Sum : "+sum);
+
+//a program that takes a input and determines if the number is a prime.
+let m=30
+for(let i=2;i<m;i++)
 {
-    case 1:
-        let thousand = (num /1000);
-        console.log("Thousand : " + Math.floor(thousand));
+    if(m%i!=0)
+    {
+        console.log("Given number is  a prime number");
         break;
-    case 2:
-        let a=num%1000;
-        let hun = a / 100;
-        console.log("Hundreds : " + Math.floor(hun));
+    }
+    else{
+        console.log("Given number is not prime Number");
         break;
-    case 3:
-        let b = num % 100;
-        let ten = b/ 10 ;
-        console.log("Tens : " + Math.floor(ten)) ;
-        break;
-    case 4:
-        let c=num%10
-        let one = c / 1
-        console.log("Units : " + Math.floor(one));
-        break;
+    }
 }
-//Arthamatic operation
-let k=10;
-let l=20;
-let m=30;
-let d=k + l * m;
-let e=m + k / l;
-let f=k % l + m;
-let g=k * l + m;
-const arr=[];
-arr.push(d,e,f,g);
-console.log("Maximum num : " + Math.max(...arr));
-console.log("Maximum num : " + Math.min(...arr));
+
+// program to print prime numbers between the Range numbers
+let k=100;
+let arr=[];
+// looping from lowerNumber to higherNumber
+for (let i = 1; i <= k; i++) {
+    let flag = 0;
+    // looping through 2 to user input number
+    for (let j = 2; j < i; j++) {
+        if (i % j == 0) {
+            flag = 1;
+            break;
+        }
+    }
+    // if number greater than 1 and not divisible by other numbers
+    if (i > 1 && flag == 0) {
+        console.log(i);
+        arr.push(i);
+    }
+}
+console.log("The Count of Prime Number" + arr.length);
+
+//computes a factorial of a number
+let f=5;
+let mul=1;
+for(let i=1;i<=f;i++)
+{
+    mul=mul*i;
+}
+console.log("The Factorial : " + mul);
+//integer is the value for which we are finding prime factors
+var integer = 50;
+//find divisors starting with 2
+for (let i = 2; i < integer/2; i++)
+{
+  if (integer % i == 0)
+   {
+       console.log(i);
+     //check if divisor is prime
+        for (let j = 2; j < i; j++)
+        {
+            if (i % j == 0)
+            {
+                console.log(i + " is  not a prime number");
+                break;
+            }
+            else
+            {
+                console.log(i + " is a Prime Number ");
+                break;
+            }
+        }
+    }
+}
