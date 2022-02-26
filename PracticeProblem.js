@@ -37,8 +37,7 @@ function palin(Num){
 }
 palin(121);
 //function to check if the two numbers are Palindromes
-function Palindrome(number)
-	{
+function Palindrome(number){
         for (let i = 1; i <= number; i++) 
         {
             let flag = 0;
@@ -69,6 +68,5 @@ function Palindrome(number)
 			   console.log(final + "  The number is Palindrome");
 		    }
         }
-        
 	}
     Palindrome(100);
