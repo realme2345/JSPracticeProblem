@@ -1,57 +1,73 @@
-//Repetition Practice Problems with for loop
-//a program that takes a command-line argument n and prints a table of the
-//powers of 2 that are less than or equal to 2^n.
-let num=10
-let i=0;
-while(i<=num)
+//find degF or degC based on their Conversion Selection.
+function CTOF(celsius) 
 {
-    let power=2**i
-    if(power<=256)
-    {
-        console.log(power);
-    }
-    i++;
-}
-//Function to find nth magic number
-let n = 5;
-let pow = 1, answer = 0;
-// Go through every bit of n
-while (n != 0)
-{
-    pow = pow * 5;
- 
-// If last bit of n is set
-    if ((n & 1) == 1)
-    answer += pow;
-    // proceed to next bit
-    // or n = n/2
-    n >>= 1;
-}
-console.log(answer);
-//the Flip Coin problem till either Heads or Tails wins 11 times.
-let m=50;
-const arr=[];
-const array=[];
-for(let k=1;k<=m;k++)
-{
-    let random=Math.floor(Math.random()*2);
-    if(random==1)
-    {
-        arr.push(random);
-        if(arr.length==11)
-        {
-           console.log("Head is Reached 11 Times");
-           break;
-        }
-    }
-    else
-    {
-        array.push(random);
-        if(array.length==11)
-        {
-            console.log("Tail is Reached 11 Times");
-            break;
-        }
-    }
+  let cTemp = celsius;
+  let cToFahr = cTemp * 9 / 5 + 32;
+  let  result = (cTemp+ " celsius is '" + cToFahr+   "   Fahrenit");
+    console.log(result);
 }
 
+function FTOC(fahrenheit) 
+{
+  let fTemp = fahrenheit;
+  let fToCel = (fTemp - 32) * 5 / 9;
+  let results = (fTemp+ " Fahrenit is "  + fToCel + " Celsius");
+  console.log(results);
+}
+CTOF(60);
+FTOC(45);
+//function to check if the two numbers are Palindromes
+function palin(Num){
+    let rem, temp, final = 0;
+    temp = Num;
+	while(Num>0)
+	{
+		rem = Num%10;
+		Num= parseInt(Num/10);
+		final = final*10+rem;
+	}
+	if(final==temp)
+	{
+		console.log("The number is Palindrome");
+	}
+    else
+	{
+		console.log("The number is not palindrome");
+	}
+}
+palin(121);
+//function to check if the two numbers are Palindromes
+function Palindrome(number)
+	{
+        for (let i = 1; i <= number; i++) 
+        {
+            let flag = 0;
+            // looping through 2 to user input number
+            for (let j = 2; j < i; j++) 
+            {
+                if (i % j == 0) 
+                {
+                    flag = 1;
+                    break;
+                }
+            }
+            // if number greater than 1 and not divisible by other numbers
+            if (i > 1 && flag == 0) 
+            {
+                console.log(i);
+            }
+		    let rem, temp, final = 0;
+		    temp = i;
+		    while(i>0)
+		    {
+			   rem = i%10;
+			   i = parseInt(number/10);
+			   final = final*10+rem;
+		    }
+		    if(final==temp)
+		    {
+			   console.log(final + "  The number is Palindrome");
+		    }
+        }
+	}
+    Palindrome(100);
